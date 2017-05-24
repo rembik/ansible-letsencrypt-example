@@ -1,0 +1,4 @@
+.ssh
+**/vault
+.vault
+.cron

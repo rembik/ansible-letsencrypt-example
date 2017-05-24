@@ -1,0 +1,11 @@
+# inventory
+
+[example_lan]
+control_example_com
+iis_example_com
+utm_example_com
+msx_example_com
+nginx_example_com
+
+[letsencrypt]
+control_example_com

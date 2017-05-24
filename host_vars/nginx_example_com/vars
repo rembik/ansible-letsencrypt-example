@@ -1,0 +1,21 @@
+---
+
+# Ansible host config:
+ansible_connection: ssh
+ansible_host: "nginx.example.com"
+ansible_user: "user"
+ansible_password: "{{ vault_ansible_pass }}"
+#ansible_private_key_file: "/root/.ssh/nginx.example.com"
+
+# letsencrypt role defaults:
+le_deploy2_nginx_certs_dir: "/custom/path/to/certs"
+
+# letsencrypt deploy certificates:
+le_deploy_certificate:
+    nginx_example_com:
+        domain: "nginx.example.com"
+    other_domain_com:
+        domain: "other.domain.com"
+le_deploy_certificates:
+    - "{{ le_deploy_certificate.nginx_example_com }}"
+    - "{{ le_deploy_certificate.other_domain_com }}"

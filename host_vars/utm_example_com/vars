@@ -1,0 +1,42 @@
+---
+
+# Ansible host config:
+ansible_connection: ssh
+ansible_port: 2222
+ansible_become: false
+ansible_host: "utm.example.com"
+ansible_user: "loginuser"
+ansible_private_key_file: "/root/.ssh/utm.example.com"
+ansible_password: "{{ vault_ansible_pass }}"
+
+# letsencrypt role defaults:
+le_deploy2_webserver: "sophos_utm"
+
+# letsencrypt deploy certificates:
+le_deploy_certificate:
+    utm_example_com:
+        domain: "utm.example.com"
+        ref: ""
+        ref_ca: "REF_CaVerLetsEncryAutho"
+    msx_example_com:
+        domain: "msx.example.com"
+        ref: ""
+        ref_ca: "REF_CaVerLetsEncryAutho"
+    nginx_example_com:
+        domain: "nginx.example.com"
+        ref: ""
+        ref_ca: "REF_CaVerLetsEncryAutho"
+    iis_example_com:
+        domain: "iis.example.com"
+        ref: ""
+        ref_ca: "REF_CaVerLetsEncryAutho"
+    other_domain_com:
+        domain: "other.domain.com"
+        ref: ""
+        ref_ca: "REF_CaVerLetsEncryAutho"
+le_deploy_certificates:
+    - "{{ le_deploy_certificate.utm_example_com }}"
+    - "{{ le_deploy_certificate.msx_example_com}}"
+    - "{{ le_deploy_certificate.nginx_example_com}}"
+    - "{{ le_deploy_certificate.iis_example_com}}"
+    - "{{ le_deploy_certificate.other_domain_com}}"

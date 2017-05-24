@@ -1,0 +1,30 @@
+---
+
+# Ansible host config:
+ansible_connection: local
+ansible_host: "control.example.com"
+ansible_user: "user"
+#ansible_password: "{{ vault_ansible_pass }}"
+
+# letsencrypt certificates:
+le_certificate:
+    msx_example_com:
+        domain: "msx.example.com"
+        altnames: "autodiscover.example.com owa.example.com"
+    iis_example_com:
+        domain: "iis.example.com"
+    nginx_example_com:
+        domain: "nginx.example.com"
+    utm_example_com:
+        domain: "utm.example.com"
+    other_domain_com:
+        domain: "other.domain.com"
+        dns_provider: "hetzner"
+        auth_username: "{{ hetzner_auth_username_user }}"
+        auth_password "{{ hetzner_auth_password_user }}"
+le_certificates:
+    - "{{ le_certificate.msx_example_com }}"
+    - "{{ le_certificate.iis_example_com}}"
+    - "{{ le_certificate.nginx_example_com}}"
+    - "{{ le_certificate.utm_example_com}}"
+    - "{{ le_certificate.other_domain_com}}"

@@ -1,0 +1,38 @@
+---
+
+- hosts: letsencrypt
+  vars:
+    le_cron_inventory_groups:
+      - "example_lan"
+  roles:
+    - letsencrypt
+  post_tasks:
+    - name: "letsencrypt : SETUP : config letsencrypt cronjobs (incl. mail_error) for inventory groups"
+      include: "roles/letsencrypt/tasks/setup_cron.yml"
+      with_items:
+        - "{{ le_cron_inventory_groups }}"
+      loop_control:
+        loop_var: le_setup_cron_loop
+      tags:
+        - setup
+    - block:
+        - name: "Ansible Playbook : logrotate - install package"
+          apt:
+            name: logrotate
+            state: latest
+          delegate_to: 127.0.0.1
+        - name: "Ansible Playbook : logrotate - config rotation"
+          copy:
+            src: roles/letsencrypt/files/setup/localhost/logrotate
+            dest: /etc/logrotate.d/ansible_log_plays
+            owner: root
+            group: root
+            mode: 0644
+          delegate_to: 127.0.0.1
+      run_once: true
+      tags:
+        - setup
+
+- hosts: all
+  roles:
+    - { role: letsencrypt, le_deploy: true }

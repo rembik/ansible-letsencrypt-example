@@ -1,0 +1,25 @@
+---
+
+# letsencrypt role defaults:
+le_deploy2_webserver: "nginx"
+le_dehydrated_contact_email: "admin@example.com"
+le_dehydrated_pkcs12_password: "{{ vault_le_dehydrated_pkcs12_password }}"
+
+# dns provider Cloudflare credentials:
+cloudflare_auth_username_user: "my-cloudflare-user"
+cloudflare_auth_token_user: "{{ vault_cloudflare_auth_password_user }}"
+
+# dns provider Hetzner credentials:
+hetzner_auth_username_user: "my-hetzner-user"
+hetzner_auth_password_user: "{{ vault_hetzner_auth_password_user }}"
+
+# letsencrypt default dns provider credentials:
+le_dns_lexicon_auth_username: "{{ cloudflare_auth_username_user }}"
+le_dns_lexicon_auth_token: "{{ cloudflare_auth_token_user }}"
+
+# Ansible mail_error callback config for [example_lan]:
+err_mail_host: 'smtp.gmail.com'
+err_mail_port: '587'
+err_mail_username: 'user@gmail.com'
+err_mail_password: "{{ vault_err_mail_password }}"
+err_mail_to: 'admin@example.com'

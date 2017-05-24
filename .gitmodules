@@ -1,3 +1,6 @@
 [submodule "roles\\letsencrypt"]
 	path = roles\\letsencrypt
 	url = https://github.com/rembik/ansible-role-letsencrypt.git
+[submodule "roles/letsencrypt"]
+	path = roles/letsencrypt
+	url = https://github.com/rembik/ansible-role-letsencrypt.git
