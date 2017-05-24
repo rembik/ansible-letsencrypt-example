@@ -2,7 +2,7 @@
 Uses [Ansible Role: Let's Encrypt private networks](https://github.com/rembik/ansible-role-letsencrypt) to:
 * **Setup** Let's Encrypt ACME client on local Debian/Ubuntu Linux server `control.example.com` and sign/renew **certificate**s.
 * **Deploy** them to local Linux or Windows proxy-/webservers: `utm.example.com`, `nginx.example.com`, `msx.example` and `iis.example.com`.
-* **Automate** certificate cycle on local Debian/Ubuntu Linux server `control.aranox.de` as Ansible Control Machine.
+* **Automate** certificate cycle on local Debian/Ubuntu Linux server `control.example.com` as Ansible Control Machine.
 
 ## Requirements
 * Ansible >= 2.3, ([Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-ubuntu))
