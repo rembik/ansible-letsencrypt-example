@@ -1,4 +1,4 @@
-# Ansible: Let's Encrypt LAN `Aranox Cloud`
+# Ansible: Let's Encrypt LAN `example`
 Uses [Ansible Role: Let's Encrypt private networks](https://github.com/rembik/ansible-role-letsencrypt) to:
 * **Setup** Let's Encrypt ACME client on local Debian/Ubuntu Linux server `control.example.com` and sign/renew **certificate**s.
 * **Deploy** them to local Linux or Windows proxy-/webservers: `utm.example.com`, `nginx.example.com`, `msx.example` and `iis.example.com`.
