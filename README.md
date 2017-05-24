@@ -9,7 +9,7 @@ Uses [Ansible Role: Let's Encrypt private networks](https://github.com/rembik/an
 * [`letsencrypt` role requirements](https://github.com/rembik/ansible-role-letsencrypt#requirements) 
 
 #### Pre-setup check
-* Make sure all Windows servers are pre-configured for remote management with Ansible ( [Wiki](https://github.com/rembik/ansible-letsencrypt-example/wiki/Configure-Windows-Server)).
+* Make sure all Windows servers are pre-configured for remote management with Ansible ([Wiki](https://github.com/rembik/ansible-letsencrypt-example/wiki/Configure-Windows-Server)).
 * Make sure Sophos UTM is pre-configured for Ansible Role: Let's Encrypt ([Wiki](https://github.com/rembik/ansible-letsencrypt-example/wiki/Configure-Sophos-UTM)).
 
 ## Setup
