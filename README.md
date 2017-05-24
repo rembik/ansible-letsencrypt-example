@@ -7,7 +7,6 @@ Uses [Ansible Role: Let's Encrypt private networks](https://github.com/rembik/an
 ## Requirements
 * Ansible >= 2.3, ([Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-ubuntu))
 * [`letsencrypt` role requirements](https://github.com/rembik/ansible-role-letsencrypt#requirements) 
-* Deploy key for `root` user on Ansible Control Machine should be set for this repository.
 
 #### Pre-setup check
 * Make sure all Windows servers are pre-configured for remote management with Ansible ( [Wiki](https://github.com/rembik/ansible-letsencrypt-example/wiki/Configure-Windows-Server)).
