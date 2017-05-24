@@ -20,6 +20,7 @@ cd /opt/letsencrypt
 mkdir certs
 chmod 0700 certs
 git clone --recursive https://github.com/rembik/ansible-letsencrypt-example.git provision
+cd provision
 ```
 After getting repository and setting local certificate-exchange directory, create a file which contains your Ansible vault password and create an `vault` file for every needed `vars` file ([Docs](http://docs.ansible.com/ansible/playbooks_vault.html)).
 ```
