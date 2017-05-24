@@ -5,6 +5,7 @@ ansible_connection: local
 ansible_host: "control.example.com"
 ansible_user: "user"
 #ansible_password: "{{ vault_ansible_pass }}"
+#ansible_become_pass: "{{ vault_ansible_pass }}"
 
 # letsencrypt certificates:
 le_certificate:
