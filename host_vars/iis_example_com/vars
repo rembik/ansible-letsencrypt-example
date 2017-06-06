@@ -26,3 +26,4 @@ le_deploy_certificate:
         keystore_password: "{{ vault_keystore_password }}"
 le_deploy_certificates:
     - "{{ le_deploy_certificate.iis_example_com }}"
+    - "{{ le_deploy_certificate.monitor_example_com }}"
