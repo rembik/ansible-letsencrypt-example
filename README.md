@@ -11,6 +11,7 @@ Uses [Ansible Role: Let's Encrypt private networks](https://github.com/rembik/an
 #### Pre-setup check
 * Make sure all Windows servers are pre-configured for remote management with Ansible ([Wiki](https://github.com/rembik/ansible-letsencrypt-example/wiki/Configure-Windows-Server)).
 * Make sure Sophos UTM is pre-configured for Ansible Role: Let's Encrypt ([Wiki](https://github.com/rembik/ansible-letsencrypt-example/wiki/Configure-Sophos-UTM)).
+* Make sure Windows Server which running Spiceworks Network Monitor is pre-configured ([Wiki](https://github.com/rembik/ansible-letsencrypt-example/wiki/Configure-Spiceworks-Monitor)).
 
 ## Setup
 ```
