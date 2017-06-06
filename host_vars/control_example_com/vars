@@ -18,6 +18,8 @@ le_certificate:
         domain: "nginx.example.com"
     utm_example_com:
         domain: "utm.example.com"
+    monitor_example_com:
+        domain: "monitor.example.com"
     other_domain_com:
         domain: "other.domain.com"
         dns_provider: "hetzner"
@@ -28,4 +30,5 @@ le_certificates:
     - "{{ le_certificate.iis_example_com}}"
     - "{{ le_certificate.nginx_example_com}}"
     - "{{ le_certificate.utm_example_com}}"
+    - "{{ le_certificate.monitor_example_com}}"
     - "{{ le_certificate.other_domain_com}}"
