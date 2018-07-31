@@ -5,7 +5,7 @@ Uses [Ansible Role: Let's Encrypt private networks](https://github.com/rembik/an
 * **Automate** certificate cycle on local Debian/Ubuntu Linux server `control.example.com` as Ansible Control Machine.
 
 ## Requirements
-* Ansible >= 2.3, ([Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-ubuntu))
+* Ansible >= 2.5, ([Docs](http://docs.ansible.com/ansible/intro_installation.html#latest-releases-via-apt-ubuntu))
 * [`letsencrypt` role requirements](https://github.com/rembik/ansible-role-letsencrypt#requirements) 
 
 #### Pre-setup check
